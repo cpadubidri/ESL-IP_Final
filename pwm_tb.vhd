@@ -31,6 +31,7 @@ component pwm_ts is
       );
 end component;
 
+
 signal clk_i, reset_i, enable_i, C_i, INA_i, INB_i : std_logic;
 signal dutycycle_i  : std_logic_vector(7 downto 0);
 signal dir_i		: std_logic_vector(1 downto 0);  
@@ -52,4 +53,5 @@ ts_tb: pwm_ts port map( clk 	  => clk_i,
 				dutycycle => dutycycle_i,
 				dir 	  => dir_i	
 				);
+
 end architecture;

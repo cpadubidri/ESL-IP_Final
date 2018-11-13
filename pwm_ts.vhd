@@ -57,16 +57,7 @@ begin
           dutycycle <= std_logic_vector(to_unsigned(a, dutycycle'length));
           wait for 200 ns;
           enable <= '0';
-          wait for 1 ms;
-          
-          --enable <= '1';
-          --wait for 200 ns;
-          --a := 0;
-          --dutycycle <= std_logic_vector(to_unsigned(a, dc'length));
-          --wait for 200 ns;
-          --enable <= '0';
-          --wait for 1 ms;
-          
+          wait for 1 ms;       
           
           assert false report "end" severity failure;
       end process;
